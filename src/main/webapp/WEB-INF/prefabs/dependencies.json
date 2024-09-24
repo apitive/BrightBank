@@ -1,0 +1,105 @@
+[ {
+  "name" : "AddressWithGooglePlaces",
+  "version" : "5.1",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "User_Registration",
+  "version" : "7.8",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : [ {
+    "name" : "AddressWithGooglePlaces",
+    "version" : "5.1",
+    "platformVersion" : null,
+    "publisherId" : null,
+    "publisherName" : null,
+    "artifactType" : "PREFAB",
+    "artifactDependencyList" : null
+  } ]
+}, {
+  "name" : "Create_Account",
+  "version" : "6.3",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "ManagedCardDetails",
+  "version" : "5.10",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "ApplyManagedCard",
+  "version" : "6.5",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : [ {
+    "name" : "AddressWithGooglePlaces",
+    "version" : "5.1",
+    "platformVersion" : null,
+    "publisherId" : null,
+    "publisherName" : null,
+    "artifactType" : "PREFAB",
+    "artifactDependencyList" : null
+  } ]
+}, {
+  "name" : "Transfer_Funds",
+  "version" : "6.1",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "List_Transactions",
+  "version" : "7.21",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "Managed_Accounts",
+  "version" : "7.9",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "Account_Details",
+  "version" : "6.4",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "ManagedCards",
+  "version" : "7.36",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "QRCode",
+  "version" : "2.0.0",
+  "platformVersion" : null,
+  "publisherId" : null,
+  "publisherName" : null,
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+} ]

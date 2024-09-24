@@ -1,0 +1,24 @@
+{
+  "managedAccountsGet" : {
+    "_id" : "wm-managedAccountsGet-wm.ServiceVariable-1626084790312",
+    "name" : "managedAccountsGet",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.weavrbank.weavrLogin.WeavrLoginManagedAccountsGetResponse",
+    "service" : "weavrLogin",
+    "operation" : "weavrLogin_managedAccountsGet",
+    "operationId" : "weavrLogin_managedAccountsGet",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "managedAccountsGetonSuccess(variable, data, options)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Managed Accounts"
+  }
+}

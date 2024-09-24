@@ -1,0 +1,35 @@
+{
+  "JS_getAllManagedCards" : {
+    "_id" : "wm-JS_getAllManagedCards-wm.ServiceVariable-1627048974594",
+    "name" : "JS_getAllManagedCards",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "hostName",
+      "value" : "bind:Prefab.servicehost",
+      "type" : "string"
+    }, {
+      "target" : "authorization",
+      "value" : "bind:Prefab.authtoken",
+      "type" : "string"
+    }, {
+      "target" : "endUserId",
+      "value" : "bind:Prefab.enduserid",
+      "type" : "string"
+    } ],
+    "service" : "ManageCardsService",
+    "operation" : "getAllManagedCards",
+    "operationId" : "ManageCardsController_getAllManagedCards",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ManageCards"
+  }
+}

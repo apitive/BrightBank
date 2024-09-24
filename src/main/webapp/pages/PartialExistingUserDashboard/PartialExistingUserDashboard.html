@@ -1,0 +1,155 @@
+<wm-partial name="partial1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow15">
+            <wm-gridcolumn columnwidth="5" name="gridcolumn25_1" class="db-column-1 col-md-7 col-sm-12 col-xs-12">
+                <wm-layoutgrid name="layoutgrid8">
+                    <wm-gridrow name="gridrow16">
+                        <wm-gridcolumn columnwidth="8" name="gridcolumn31">
+                            <wm-label padding="unset 0.5em unset 0.8em" name="label17" caption="bind:&quot;Accounts (&quot;+Variables.managedAccountsGet.dataSet.count+&quot;)&quot;" fontsize="28" margin="0px unset unset unset" class="font-medium"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn28_1" horizontalalign="right">
+                            <wm-picture name="picture2" width="25px" height="25px" picturesource="resources/images/imagelists/circle-plus_3x.png"></wm-picture>
+                            <wm-button class="btn-transparent" caption="ADD ACCOUNT" type="button" margin="unset 0.5em unset unset" name="buttonAddAccount" fontsize="13"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow17" padding="unset unset 1.5em unset">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn29">
+                            <wm-list listclass="list-group" template="true" template-name="Business Card" itemsperrow="xs-1 sm-1 md-1 lg-2" class="list-card" statehandler="none" dataset="bind:Variables.managedAccountsGet.dataSet.accounts" navigation="Inline"
+                                name="listAccounts" title="" selectfirstitem="false" padding="unset unset 2em unset" pagesize="2" on-select="listAccountsSelect(widget, $data)" nodatamessage="No Accounts found" selectionlimit="0">
+                                <wm-listtemplate layout="media" name="listtemplate2_1">
+                                    <wm-card name="card1">
+                                        <wm-card-content fontsize="0.8" fontunit="em" name="card_content1">
+                                            <wm-layoutgrid columns="2" name="layoutgrid3">
+                                                <wm-gridrow name="gridrow5">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn9">
+                                                        <wm-label name="JobTitle" caption="bind:Widgets.listAccounts.currentItem.tag" class="p text-muted" margin="0px unset" whitespace="nowrap" fontsize="12"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn10">
+                                                        <wm-label padding="unset 0.5em" name="label8" class="pull-right account-currency" caption="bind:Widgets.list2.currentItem.currency == 'GBP' ? '£' : Widgets.list2.currentItem.currency == 'USD' ? '$': '€'"
+                                                            fontsize="13"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow7">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                                                        <wm-label name="Name" caption="bind:Widgets.listAccounts.currentItem.friendlyName" class="h4" margin="0px unset" whitespace="nowrap" fontweight="bold" padding="0px unset unset unset" fontsize="15"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow12_1">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn19_3">
+                                                        <wm-label padding="unset 0.5em unset unset" name="label19_1" caption="bind:maskAccountNumber(Widgets.listAccounts.currentItem.id)" class="p text-muted" margin="0.3em unset unset unset" fontsize="12"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow6_1">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                                                        <wm-label padding="0.5em 0em unset 0em" name="label7" caption="bind:(Widgets.listAccounts.currentItem.currency == 'GBP' ? '£ ': Widgets.listAccounts.currentItem.currency == 'USD' ? '$ ': '€ ')+ (Widgets.listAccounts.currentItem.balances.actualBalance+&quot;.00&quot;)"
+                                                            class="p" fontsize="24" fontunit="px"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-card-content>
+                                    </wm-card>
+                                </wm-listtemplate>
+                            </wm-list>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow21">
+                        <wm-gridcolumn columnwidth="8" name="gridcolumn37">
+                            <wm-label padding="unset 0.5em unset 0.8em" caption="bind:&quot;Cards (&quot;+Variables.managedCardsGet.dataSet.count+&quot;)&quot;" fontsize="18" margin="0em unset unset unset" name="label25_1" class="font-medium"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn38_1" horizontalalign="right">
+                            <wm-picture width="25px" height="25px" picturesource="resources/images/imagelists/circle-plus_3x.png" name="picture3_1"></wm-picture>
+                            <wm-button class="btn-transparent" caption="ADD CARD" type="button" margin="unset 0.5em unset unset" name="buttonAddCard" fontsize="13"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn20">
+                            <wm-list listclass="list-group" template="true" template-name="Business Card" itemsperrow="xs-1 sm-1 md-1 lg-2" class="list-card" statehandler="none" name="listCards" dataset="bind:Variables.managedCardsGet.dataSet.cards" navigation="Inline"
+                                itemclass="bind:item.type == 'VIRTUAL' ?  'virtual-card':'physical-card'" nodatamessage="No Cards found." pagesize="2">
+                                <wm-listtemplate layout="media" name="listtemplate1">
+                                    <wm-card name="card1">
+                                        <wm-card-content fontsize="0.8" fontunit="em" name="card_content1" backgroundrepeat="no-repeat" backgroundsize="220" class="cardContainerStyle">
+                                            <wm-layoutgrid columns="2" name="layoutgrid2">
+                                                <wm-gridrow name="gridrow5">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn10" class="col-xs-6">
+                                                        <wm-label caption="bind:Widgets.listCards.currentItem.tag" margin="0px unset" whitespace="nowrap" name="label6" fontweight="bold" fontsize="14"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn11" horizontalalign="right" class="col-xs-6">
+                                                        <wm-label caption="SPENT LIMIT" class="pull-right" margin="unset unset 0px unset" whitespace="nowrap" name="label8" fontsize="11"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow6">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn12" class="col-xs-6">
+                                                        <wm-label name="Department" caption="bind:Widgets.listCards.currentItem.cardBrand+ &quot;(&quot;+Widgets.listCards.currentItem.currency+(Widgets.listCards.currentItem.currency==&quot;GBP&quot;?&quot;£&quot;:Widgets.listCards.currentItem.currency==&quot;USD&quot;?&quot;$&quot;:&quot;€&quot;)+&quot;)&quot;"
+                                                            margin="0.3em unset unset unset" whitespace="nowrap" fontsize="11"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn13" horizontalalign="right" class="col-xs-6">
+                                                        <wm-label caption="bind:(item.currency==&quot;GBP&quot;?&quot;£&quot;:(item.currency==&quot;USD&quot;?&quot;$&quot;:&quot;€&quot;))+&quot;0&quot;" class="pull-right" margin="2px unset unset unset" whitespace="nowrap"
+                                                            name="label7" fontsize="15"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow7" class="card-number">
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn14" horizontalalign="center" class="col-xs-3">
+                                                        <wm-label caption="XXXX" on-click="label9Click($event, widget, item, currentItemWidgets)" fontsize="14" name="label10_1" margin="1em unset unset unset" class="cusorStyle pull-left" fontweight="bold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn13_2" horizontalalign="center" class="col-xs-3">
+                                                        <wm-label caption="XXXX" on-click="label9Click($event, widget, item, currentItemWidgets)" fontsize="14" name="label11_1" margin="1em unset unset unset" class="cusorStyle" fontweight="bold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn14_1" horizontalalign="center" class="col-xs-3">
+                                                        <wm-label caption="XXXX" on-click="label9Click($event, widget, item, currentItemWidgets)" fontsize="14" name="label12_1" margin="1em unset unset unset" class="cusorStyle" fontweight="bold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="3" name="gridcolumn15" horizontalalign="center" class="col-xs-3">
+                                                        <wm-label name="label9" caption="bind:Widgets.listCards.currentItem.cardNumberLastFour" on-click="label9Click($event, widget, item, currentItemWidgets)" fontsize="14" margin="1em unset unset unset" class="cusorStyle pull-right"
+                                                            fontweight="bold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow8">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn16" padding="unset 2em unset unset" class="col-xs-6">
+                                                        <wm-label caption="NAME" margin="1em unset unset unset" whitespace="nowrap" name="label10" fontsize="11"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="2" name="gridcolumn17_1" horizontalalign="left" padding="1em unset unset unset" class="col-xs-2"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn17" horizontalalign="right" class="col-xs-4">
+                                                        <wm-label caption="VALID THRU" class="pull-right" margin="1em unset unset unset" whitespace="nowrap" name="label11" fontsize="11"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow9">
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn18" class="col-xs-4">
+                                                        <wm-label caption="bind:Widgets.listCards.currentItem.nameOnCard" margin="unset unset 0em unset" whitespace="nowrap" name="label12" fontweight="bold" fontsize="13"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn10_1" horizontalalign="center" padding="-1.2em unset unset unset" class="col-xs-4">
+                                                        <wm-picture name="picture3" width="30px" height="30px" picturesource="resources/images/imagelists/icon-rotate-card.png" margin="-1em unset unset unset"></wm-picture>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn19" horizontalalign="right" class="col-xs-4">
+                                                        <wm-label caption="bind:Widgets.listCards.currentItem.expiryMmyy | toDate: 'MM/yyyy'" class="pull-right" margin="unset unset 0em unset" whitespace="nowrap" name="label13" fontsize="13" fontweight="bold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-card-content>
+                                    </wm-card>
+                                </wm-listtemplate>
+                            </wm-list>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="7" name="gridcolumn26_1" class="db-column-2 col-md-5 col-sm-12 col-xs-12">
+                <wm-layoutgrid name="layoutgrid9_1">
+                    <wm-gridrow name="gridrow16_1">
+                        <wm-gridcolumn columnwidth="7" name="gridcolumn29_1">
+                            <wm-label padding="unset 0.5em unset unset" name="label13" caption="Recent Transactions" fontsize="18" fontweight="bold"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="5" name="gridcolumn31_2">
+                            <wm-select name="selectAccount" dataset="bind:Variables.managedAccountsGet.dataSet.accounts" datafield="id" displayexpression="bind:$[friendlyName]" datavalue="bind:Variables.managedAccountsGet.dataSet.accounts[Variables.managedAccountsGet.dataSet.count-1].id"
+                                placeholder="" on-change="Widgets.List_Transactions1.refreshTransactions()"></wm-select>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow17_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn31_1">
+                            <wm-prefab prefabname="List_Transactions" name="List_Transactions1" servicehost="APIVendor(W)" authtoken="bind:Variables.loggedInUser.dataSet.userAttributes.authtoken" transactionlisttype="Managed Account" id="bind:Widgets.selectAccount.datavalue"
+                                transactiontype="+/-" accountdetails="bind:Variables.managedAccountGet.dataSet" showsearch="false" showdate="false" show="bind:Widgets.selectAccount.datavalue!=undefined?true:false" margin="-1em unset unset unset" itemsperpage="100"></wm-prefab>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

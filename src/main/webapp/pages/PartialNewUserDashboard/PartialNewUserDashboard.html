@@ -1,0 +1,98 @@
+<wm-partial name="partial1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow1">
+            <wm-gridcolumn columnwidth="6" name="gridcolumn1" padding="1em .5em unset 1em">
+                <wm-container name="container1" on-click="Widgets.dialogCreateAccount.open()" height="200px" backgroundcolor="#ffffff" on-mouseenter="container1Mouseenter($event, widget)" on-mouseleave="container1Mouseleave($event, widget)" cursor="pointer"
+                    class="account-container" margin="2.5em unset unset unset">
+                    <wm-container name="container4" class="col-md-offset-2 col-xs-offset-1  col-md-8 panel-default" cursor="pointer" on-click="Widgets.dialogAddAccount.open()">
+                        <wm-picture width="120px" height="120px" name="pictureAccount" picturesource="resources/images/imagelists/add-account.svg" margin="unset 1em unset unset" class="cursor-pointer" on-click="Widgets.dialogAddAccount.open()"></wm-picture>
+                        <wm-picture width="25px" height="25px" picturesource="resources/images/imagelists/circle-plus_3x.png" name="picture6"></wm-picture>
+                        <wm-label caption="Create Account" name="labelAccount" class="h3" fontweight="bold" fontsize="18" margin="0.5em unset unset 0.2em"></wm-label>
+                    </wm-container>
+                </wm-container>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="6" name="gridcolumn2" padding="1em 1em unset .5em">
+                <wm-container name="container2" on-click="Widgets.NewBeneficiaryDialog.open()" height="200px" backgroundcolor="#ffffff" cursor="default" class="account-container" margin="2.5em unset unset unset">
+                    <wm-container name="container5_1" class="col-md-offset-2  col-md-8 panel-default col-xs-offset-1" cursor="default">
+                        <wm-picture name="picture2" width="120px" height="120px" picturesource="resources/images/imagelists/img-add-card.png" margin="unset 1em unset unset" cursor="pointer" hint="Create Account To Apply For Card."></wm-picture>
+                        <wm-layoutgrid name="layoutgrid4">
+                            <wm-gridrow name="gridrow6">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn7_1">
+                                    <wm-label padding="unset 0.5em unset unset" caption="Apply For Card" name="label3" class="h3" margin="unset unset 0px unset" fontweight="bold" color="#a3a3a3" hint="Create Account To Apply For Card." fontsize="18"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow7">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                    <wm-label padding="unset 0.5em unset unset" name="label5_1" caption="You can Apply for Card from GBP or EUR Ledger" fontsize="13" fontunit="px" hint="Create Account To Apply For Card." show="false"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-container>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn3" horizontalalign="center" padding="1em 1em unset .5em"></wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Create Account" iconclass="" name="dialogAddAccount" closable="false" showheader="false" class="wizard-dialog">
+        <wm-layoutgrid name="layoutgrid2">
+            <wm-gridrow name="gridrow3">
+                <wm-gridcolumn columnwidth="3" name="gridcolumn5" padding="2em 4em">
+                    <wm-layoutgrid name="layoutgrid3" columns="1">
+                        <wm-gridrow name="gridrow7">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                                <wm-picture name="picture1" picturesource="resources/images/imagelists/add-account.svg"></wm-picture>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow8">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn14">
+                                <wm-label padding="unset 0.5em" name="label2" caption="Create Account" fontweight="bold" class="h3"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow9">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                                <wm-label padding="unset 0.5em" name="label3" caption="Digital bank accounts can hold single currency only" show="false"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="9" name="gridcolumn6">
+                    <wm-label padding="unset 0.5em unset 1.5em" name="label4" caption="Create Account" fontweight="bold" class="h3"></wm-label>
+                    <wm-prefab prefabname="Create_Account" name="Create_Account1" authtoken="bind:Variables.loggedInUser.dataSet.userAttributes.authtoken" on-ledgeradd="Widgets.dialogAddAccount.close();Widgets.dialogAccountSuccess.open()" on-cancel="Widgets.dialogAddAccount.close()"
+                        servicehost="APIVendor(W)"></wm-prefab>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="" iconclass="wi wi-file-text" name="dialogAccountSuccess" showheader="false" class="wizard-dialog">
+        <wm-container name="container1" class="fullbleed-notification-popup">
+            <wm-container name="container5">
+                <wm-layoutgrid name="layoutgrid4" columns="1">
+                    <wm-gridrow name="gridrow13">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn21" horizontalalign="center">
+                            <wm-picture name="picture2" backgroundimage="resources/images/imagelists/icon-bg.png" picturesource="resources/images/imagelists/add-account.svg"></wm-picture>
+                            <wm-picture name="picture3" width="30px" height="30" margin="7em unset unset -2em" picturesource="resources/images/imagelists/circle-green-tick.png"></wm-picture>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow14">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn22" horizontalalign="center">
+                            <wm-label padding="unset 0.5em" name="label9" caption="Account created Succesful!" class="h2"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow15">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn23" horizontalalign="center">
+                            <wm-button class="btn-secondary" caption="OKAY" type="button" margin="unset 0.5em" name="button3" on-click="Widgets.dialogAccountSuccess.close();Actions.goToPage_ManagedAccounts.invoke()" width="113px" height="44px"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow16">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn24"></wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+        </wm-container>
+        <wm-dialogactions name="dialogactions1" show="false">
+            <wm-button class="btn-primary" caption="Close" on-click="Actions.goToPage_ManagedAccounts.invoke()" name="button2"></wm-button>
+        </wm-dialogactions>
+    </wm-dialog>
+</wm-partial>

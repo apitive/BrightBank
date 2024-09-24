@@ -1,0 +1,90 @@
+[ {
+  "name" : "AccountTransactions",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "accountId",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "CreateLoginCredentials",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "identityId",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "Dashboard",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "LoginOrSignup",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ManagedAccounts",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ManagedCardTransactions",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "managedCardId",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "ManagedCards",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "PartialExistingUserDashboard",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "PartialNewUserDashboard",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "RegisterUser",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "profileActionsPopup",
+  "type" : "POPOVER",
+  "params" : [ ]
+}, {
+  "name" : "profileHeader",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+} ]

@@ -1,0 +1,35 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-list listclass="list-group" template="true" template-name="Business Card" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card ledgers-list" statehandler="none" name="list1" dataset="bind:Variables.JS_getManagedAccounts.dataSet" navigation="On-Demand"
+        paginationclass="btn-default" on-click="list1Click($event, widget)" nodatamessage="bind:servicehost==&quot;APIVendor(R)&quot;?&quot;Loading ledgers...&quot;:&quot;No Accounts found..&quot;" loadingdatamsg="bind:servicehost==&quot;APIVendor(R)&quot;?&quot;Loading ledgers...&quot;:&quot;Loading Accounts...&quot;"
+        on-select="list1Select(widget, $data)" on-tap="list1Tap($event, widget)">
+        <wm-listtemplate layout="media" name="listtemplate2">
+            <wm-card name="card1">
+                <wm-card-content fontsize="0.8" fontunit="em" name="card_content1">
+                    <wm-layoutgrid name="layoutgrid2">
+                        <wm-gridrow name="gridrow3">
+                            <wm-gridcolumn columnwidth="8" name="gridcolumn5" class="col-xs-8">
+                                <wm-label caption="bind:Variables.JS_getManagedAccounts.dataSet[$i].tag" class="p text-muted" margin="0px unset unset unset" name="JobTitle" fontsize="12"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn6" class="col-xs-4" horizontalalign="right">
+                                <wm-label padding="unset 0.5em" name="label4" class="pull-right account-currency" caption="bind:Widgets.list1.currentItem.currency==&quot;GBP&quot;?&quot;£&quot;:Widgets.list1.currentItem.currency==&quot;USD?&quot;?&quot;$&quot;: &quot;€&quot;"
+                                    fontsize="14" margin="unset unset 0px unset"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow4">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                <wm-label name="Name" class="h3 media-heading pull-left" caption="bind:Variables.JS_getManagedAccounts.dataSet[$i].name" fontunit="em" fontweight="bold"></wm-label>
+                                <wm-label padding="unset 0.5em unset unset" name="label5" fontsize="13" caption="bind:maskAccountNumber(Widgets.list1.currentItem.id)" class="text-muted"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow5">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                <wm-label name="Content" caption="bind:(Widgets.list1.currentItem.currency == 'GBP' ? '£ ': (Widgets.list1.currentItem.currency == 'USD') ? '$ ': '€ ')+ Widgets.list1.currentItem.balance+&quot;.00&quot;" class="h2" fontunit="px"
+                                    fontsize="28" margin="0px unset unset unset" show="bind:Widgets.list1.currentItemWidgets.Name.caption!=&quot;&quot;"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-card-content>
+            </wm-card>
+        </wm-listtemplate>
+    </wm-list>
+</wm-prefab-container>

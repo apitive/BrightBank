@@ -1,0 +1,9 @@
+.strippedStyle{
+    background: repeating-linear-gradient(
+  -55deg,
+  #aeaeae,
+  #aeaeae 4px,
+  #d6d6d6 4px,
+  #d6d6d6 8px
+);
+}

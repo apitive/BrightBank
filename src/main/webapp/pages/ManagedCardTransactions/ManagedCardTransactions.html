@@ -1,0 +1,51 @@
+<wm-page pagetitle="Card Transactions" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn3">
+                        <wm-container name="container2" class="ledger-card" height="540px">
+                            <wm-layoutgrid name="layoutgrid2" columns="1">
+                                <wm-gridrow name="gridrow5_1">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                        <wm-label padding="unset 0.5em" name="label4_1" caption="Card Details" fontsize="25"></wm-label>
+                                        <wm-button class="text-primary btn-transparent" caption="" type="button" margin="0.2em 0.5em 1em unset" name="button3" on-click="Widgets.List_Transactions1.refreshTransactions();Widgets.ManagedCardDetails1.refreshCards()"
+                                            iconclass="wi wi-refresh fa-2x" hint="Refresh Details"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow5">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                        <wm-prefab prefabname="ManagedCardDetails" name="ManagedCardDetails1" uikey="qUhpchEnlRYBeqOUIIAADQ==" showtransfer="false" servicehost="APIVendor(W)" authtoken="bind:Variables.loggedInUser.dataSet.userAttributes.authtoken"
+                                            managedcardid="bind:pageParams.managedCardId" on-fundcardclick="Widgets.dialog2.open()"></wm-prefab>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow6">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn10" horizontalalign="center">
+                                        <wm-picture name="picture3" picturesource="resources/images/imagelists/img-carousal-1.png" margin="6.5em unset unset unset" showindevice="sm,md,lg"></wm-picture>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn4">
+                        <wm-tabs type="static" statehandler="URL" name="tabs1">
+                            <wm-tabpane name="tabpane1" title="Transactions">
+                                <wm-prefab prefabname="List_Transactions" name="List_Transactions1" servicehost="APIVendor(W)" authtoken="bind:Variables.loggedInUser.dataSet.userAttributes.authtoken" transactiontype="CR/DR" id="bind:pageParams.managedCardId"
+                                    transactionlisttype="Managed Card" accountdetails="bind:Widgets.ManagedCardDetails1.selectedcarddetails" itemsperpage="100"></wm-prefab>
+                            </wm-tabpane>
+                            <wm-tabpane name="tabpane2" title="Spend Analysis"></wm-tabpane>
+                        </wm-tabs>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Transfer Funds to Card" iconclass="" name="dialog2" closable="false" showheader="false" class="wizard-dialog">
+        <wm-layoutgrid name="layoutgrid2"></wm-layoutgrid>
+        <wm-prefab prefabname="Transfer_Funds" name="Transfer_Funds1" servicehost="APIVendor(W)" authtoken="bind:Variables.loggedInUser.dataSet.userAttributes.authtoken" selectedbeneficiaryid="bind:Widgets.ManagedCardDetails1.selectedcarddetails.id"
+            on-transactionsuccess="Widgets.dialog2.close();Widgets.List_Transactions1.refreshTransactions();Widgets.ManagedCardDetails1.refreshCards()" on-cancel="Widgets.dialog2.close()" wizardlayout="Vertical Layout"></wm-prefab>
+    </wm-dialog>
+</wm-page>

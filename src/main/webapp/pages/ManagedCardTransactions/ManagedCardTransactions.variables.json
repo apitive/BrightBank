@@ -1,0 +1,25 @@
+{
+  "BreadCrumbData" : {
+    "_id" : "wm-BreadCrumbData-wm.Variable-1625583559305",
+    "name" : "BreadCrumbData",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "label" : "Cards",
+      "icon" : "glyphicon glyphicon-home",
+      "link" : "#/ManagedCards",
+      "id" : "ManagedCards",
+      "children" : [ {
+        "label" : " Cards Details",
+        "id" : "ManagedCardTransactions",
+        "icon" : "",
+        "link" : "#/ManagedCardTransactions"
+      } ]
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  }
+}

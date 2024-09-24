@@ -1,0 +1,42 @@
+<wm-partial name="partial1">
+    <wm-layoutgrid columns="2" name="layoutgrid3">
+        <wm-gridrow name="gridrow11">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn24" horizontalalign="right">
+                <wm-button caption="" type="button" margin="unset 0.5em" name="buttonClose" iconclass="wi wi-clear fa-2x" on-click="buttonCloseClick($event, widget)" class="btn-transparent" color="#ffffff"></wm-button>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow class="card-number" name="gridrow10">
+            <wm-gridcolumn columnwidth="12" horizontalalign="center" class="col-xs-3" name="gridcolumn21">
+                <wm-html name="html2" fontsize="22" margin="0.5em unset unset unset" show="true" deferload="true"><span id="cardNumber"></span></wm-html>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow4">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                <wm-container name="container1" class="cvv-container">
+                    <wm-layoutgrid name="layoutgrid2">
+                        <wm-gridrow name="gridrow5">
+                            <wm-gridcolumn columnwidth="8" name="gridcolumn9" class="strippedStyle col-xs-8" height="3.32em"></wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="2" name="gridcolumn10" class="col-xs-2 card-cvv">
+                                <wm-label name="label1" caption="CVV" class="label-cvv"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="2" name="gridcolumn13">
+                                <wm-html name="html1" horizontalalign="right" margin="1em unset unset unset"><span id="cvv"></span></wm-html>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-container>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+    <!--<wm-layoutgrid name="layoutgrid1">-->
+    <!--    <wm-gridrow name="gridrow1">-->
+    <!--        <wm-gridcolumn columnwidth="8" name="gridcolumn1" class="strippedStyle col-xs-8" height="3.32em"></wm-gridcolumn>-->
+    <!--        <wm-gridcolumn columnwidth="2" name="gridcolumn5" horizontalalign="right" class="col-xs-2">-->
+    <!--            <wm-label padding="unset 0.5em" name="label1" caption="CVV" margin="1em unset unset unset"></wm-label>-->
+    <!--        </wm-gridcolumn>-->
+    <!--        <wm-gridcolumn columnwidth="2" name="gridcolumn2" horizontalalign="left" class="col-xs-2">-->
+    <!--            <wm-html name="html1" horizontalalign="right" margin="1em unset unset unset"><span id="cvv"></span></wm-html>-->
+    <!--        </wm-gridcolumn>-->
+    <!--    </wm-gridrow>-->
+    <!--</wm-layoutgrid>-->
+</wm-partial>

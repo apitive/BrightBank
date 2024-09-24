@@ -1,0 +1,9 @@
+.wm-app .app-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.cursor-not-allowed {cursor: not-allowed;}
+
+.cursor-pointer {cursor: pointer;}

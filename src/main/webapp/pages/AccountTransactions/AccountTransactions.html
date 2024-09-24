@@ -1,0 +1,112 @@
+<wm-page pagetitle="Account Transactions" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-container name="container2" content="profileHeader" show="false"></wm-container>
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow7">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn17" class="db-column-1">
+                        <wm-container name="container3" class="ledger-card">
+                            <wm-layoutgrid name="layoutgrid4" columns="1">
+                                <wm-gridrow name="gridrow12">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn25">
+                                        <wm-label padding="unset 0.5em" name="label4_1" caption="Account Details" fontsize="25" class="font-medium"></wm-label>
+                                        <wm-button class="text-primary btn-transparent" caption="" type="button" margin="0.2em 0.5em 1em unset" name="button3" on-click="Widgets.Account_Details1.refreshLedgerInfo();Widgets.List_Transactions1.refreshTransactions()"
+                                            iconclass="wi wi-refresh fa-2x" hint="Refresh Details"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow10">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn23">
+                                        <wm-prefab prefabname="Account_Details" name="Account_Details1" ledgerid="bind:pageParams.accountId" servicehost="APIVendor(W)" authtoken="bind:Variables.loggedInUser.dataSet.userAttributes.authtoken" transactiontype="+/-"
+                                            detailstype="Managed Account" enduserid="bind:Variables.consumerGet.dataSet.profileId" on-fundaccountclick="Widgets.dialogFundAccount.open()" on-transferfundsclick="Widgets.transactiondataDialog.open()" showtransferfundsbutton="true"
+                                            showfundaccountbutton="true"></wm-prefab>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow13">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn26" horizontalalign="center">
+                                        <wm-picture name="picture3" picturesource="resources/images/imagelists/img-carousal-1.png" margin="6.5em unset unset unset" showindevice="sm,md,lg"></wm-picture>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn18" class="db-column-2">
+                        <wm-tabs type="static" statehandler="URL" name="tabs1">
+                            <wm-tabpane name="tabpane1" title="Transactions">
+                                <wm-prefab prefabname="List_Transactions" name="List_Transactions1" authtoken="bind:Variables.loggedInUser.dataSet.userAttributes.authtoken" transactionlisttype="Managed Account" id="bind:pageParams.accountId" transactiontype="CR/DR"
+                                    itemsperpage="10" showdate="true"></wm-prefab>
+                            </wm-tabpane>
+                            <wm-tabpane name="tabpane2" title="Spend Analysis"></wm-tabpane>
+                        </wm-tabs>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="false" title="Fund Account" iconclass="" name="dialogFundAccount" closable="false" class="wizard-dialog">
+        <wm-container name="container4" class="fullbleed-notification-popup">
+            <wm-container name="container5">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow3" padding="2em unset unset unset">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn5" padding="unset 2em" horizontalalign="center" class="col-xs-4">
+                            <wm-prefab prefabname="QRCode" name="QRCode1" width="122px" height="130px"></wm-prefab>
+                            <wm-label padding="unset 0.5em unset unset" name="label5_1" class="p text-muted" fontsize="13" caption="Scan QR code to pay" margin="unset unset unset -2.4em"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="8" name="gridcolumn6" class="col-xs-8">
+                            <wm-container class="media-body containerPadding" name="container2" show="true">
+                                <wm-layoutgrid name="layoutgrid2_1" show="true">
+                                    <wm-gridrow name="gridrow4">
+                                        <wm-gridcolumn columnwidth="9" name="gridcolumn10_1">
+                                            <wm-label padding="unset 0.5em unset unset" name="label2" caption="Account Number:" fontsize="13" class="p text-muted" margin="unset unset unset 1em"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="3" name="gridcolumn11"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn columnwidth="8" name="gridcolumn4">
+                                            <wm-text name="text1" datavalue="bind:pageParams.accountId" show="true" disabled="false" readonly="true" placeholder="" margin="unset unset 1em 1em"></wm-text>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="4" name="gridcolumn9">
+                                            <wm-button class="btn-transparent" caption="copy" type="button" margin="0.5em 0.5em unset 1.5em" name="button2" iconclass="wi wi-content-copy" on-click="button2Click($event, widget, item, currentItemWidgets)" show="false"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn columnwidth="9" name="gridcolumn13">
+                                            <wm-label padding="1em 0.5em unset unset" name="label4" caption="Amount:" class="p text-muted" fontsize="13" margin="unset unset unset 1em"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="3" name="gridcolumn14"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow3_1">
+                                        <wm-gridcolumn columnwidth="8" name="gridcolumn6_1">
+                                            <wm-text show="true" disabled="false" readonly="false" name="text2" placeholder="" margin="unset unset unset 1em"></wm-text>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="4" name="gridcolumn10"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13_1">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn23_1">
+                            <wm-spinner show="false" name="spinnerFundAccount" class="fundSpinnerStyles" caption="Please wait... while we do the heavy lifting" iconclass="fa fa-spinner fa-spin fa-pull-left fa-spin fa-spin" iconsize="3em"></wm-spinner>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="8" name="gridcolumn24"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12_1">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn20"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn21" horizontalalign="left">
+                            <wm-button class="btn-default" caption="Cancel" on-click="Widgets.dialogFundAccount.close()" name="button3" height="44px" width="100px" margin="1em unset unset unset"></wm-button>
+                            <wm-button class="btn-secondary" caption="ADD" type="button" margin="1em unset unset 1em" name="button4_1" height="44px" on-click="button4_1Click($event, widget)"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+        </wm-container>
+        <wm-dialogactions name="dialogactions1" show="false"></wm-dialogactions>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Transfer Funds" iconclass="wi wi-file-text" name="transactiondataDialog" closable="false" showheader="false" class="wizard-dialog">
+        <wm-prefab prefabname="Transfer_Funds" name="Transfer_Funds1" ledgerid="bind:Widgets.Account_Details1.selectedledgerdetails.id" servicehost="APIVendor(W)" authtoken="bind:Variables.loggedInUser.dataSet.userAttributes.authtoken" selectedledgerid="bind:Widgets.Account_Details1.selectedledgerdetails.id"
+            on-transactionsuccess="Widgets.Account_Details1.refreshLedgerInfo();Widgets.List_Transactions1.refreshTransactions()" on-cancel="Widgets.transactiondataDialog.close()" wizardlayout="Vertical Layout"></wm-prefab>
+    </wm-dialog>
+</wm-page>

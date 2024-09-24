@@ -1,0 +1,15 @@
+<wm-partial name="leftnav" type="leftnav">
+    <wm-nav name="leftnavigation" type="pills" layout="stacked">
+        <wm-nav-item name="list_dashboard">
+            <wm-anchor caption="Dashboard" name="dashboardLink" iconclass="" on-click="Actions.goToPage_Dashboard.invoke()" iconurl="resources/images/imagelists/icon-dashboard-normal.png" on-mouseenter="dashboardLinkMouseenter($event, widget)" on-mouseleave="dashboardLinkMouseleave($event, widget)"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order">
+            <wm-anchor caption="Accounts" name="orderLink" iconclass="" on-click="Actions.goToPage_ManagedAccounts.invoke();orderLinkClick($event, widget)" iconurl="resources/images/imagelists/icon-accounts-normal.png" on-mouseenter="orderLinkMouseenter($event, widget)"
+                on-mouseleave="orderLinkMouseleave($event, widget)"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support">
+            <wm-anchor caption="Cards" name="supportLink" iconclass="" on-click="Actions.goToPage_ManagedCards.invoke();supportLinkClick($event, widget)" iconurl="resources/images/imagelists/icons-cards-normal.png" on-mouseenter="supportLinkMouseenter($event, widget)"
+                on-mouseleave="supportLinkMouseleave($event, widget)"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

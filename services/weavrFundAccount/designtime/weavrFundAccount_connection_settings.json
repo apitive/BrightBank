@@ -1,0 +1,30 @@
+{
+  "endpointAddress" : "https://sandbox.weavr.io/simulate/api/accounts/{managed_account_id}/deposit",
+  "method" : "POST",
+  "headers" : {
+    "programme-key" : [ "BpoPo5uKbrIBekKIoTMBCA==" ]
+  },
+  "redirectEnabled" : true,
+  "requestBody" : "{\n  \"depositAmount\": {\n    \"currency\": \"USD\",\n    \"amount\": 10000\n  }\n}",
+  "queryParams" : { },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Tue, 13 Jul 2021 05:31:26 GMT" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "25" ],
+      "Connection" : [ "keep-alive" ],
+      "call-ref" : [ "106571647015125001" ],
+      "Strict-Transport-Security" : [ "max-age=15724800; includeSubDomains" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "Referrer-Policy" : [ "same-origin" ]
+    },
+    "responseBody" : "{\"code\":\"COMPLETED\"}",
+    "convertedResponse" : null
+  }
+}

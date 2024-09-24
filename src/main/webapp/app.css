@@ -1,0 +1,525 @@
+/*login form */
+
+.wm-app .app-login .app-form.app-login-form {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.form-control {
+    width: 90%;
+}
+
+.wm-app .app-chart .nv-legendWrap .nvd3-svg {
+    transform: translate(-50px, 290px);
+}
+
+.wm-app .h1 {
+    line-height: 1;
+}
+
+
+/*header modifications*/
+
+.wm-app .app-container[content="profileHeader"] {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+/*footer overrides*/
+
+.wm-app .app-footer {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .wm-app .app-header+.app-content {
+        height: 100%;
+    }
+}
+
+.wm-app .app-spinner.spinnerStyles .spinner-image {
+    font-size: 20px;
+}
+
+.wm-app .app-spinner.spinnerStyles {
+    position: absolute;
+    top: 92%;
+    left: 19%;
+    height: 10px;
+    background-color: transparent;
+    width: 40%;
+    color: #73777A;
+}
+
+
+/* contact list card styles */
+
+.contact-list .app-grid-row:last-child {
+    border-bottom: 0;
+}
+
+.contact-primary-details .h2 {
+    font-size: 16px;
+}
+
+.contact-list .h4 {
+    font-size: 14px;
+}
+
+.details-list {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.group-item {
+    border: 0;
+}
+
+.ledger-amount {
+    padding: 10px;
+}
+
+.wm-app .ledger-card {
+    background: #fff;
+    padding: 1em;
+    border-right: rgba(151, 151, 151, 0.2);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2em;
+}
+
+.wm-app .ledger-card .app-container {
+    background-color: #fff;
+    padding: 1em;
+    margin: 0 .5em 2em .5em;
+    box-shadow: 0 20px 100px 0 rgba(181, 190, 199, .4);
+    border-radius: 12px;
+}
+
+.wm-app .contact-list .account-number {
+    background: #fafafa;
+    padding: .2em 1em;
+    margin: 1em 0;
+    color: #333;
+}
+
+.wm-app .ledger-card .btn {
+    padding: 1em .5em;
+}
+
+
+/*beneficiary card styles*/
+
+.wm-app .list-card[name="customerList1"] .app-card .contact-details-card {
+    padding: 1em;
+}
+
+.wm-app .list-card[name="customerList1"] .app-card .contact-list {
+    color: #73777a;
+}
+
+.wm-app .list-card[name="customerList1"] .app-card .contact-list .app-label {
+    margin-bottom: 0;
+    margin-top: .5em !important;
+}
+
+
+/*director company list*/
+
+.wm-app .company-details-list {
+    margin: 1em 0;
+}
+
+.wm-app .company-details-list .app-list .app-list-item,
+.wm-app .company-details-list .app-livelist .app-list-item {
+    border: 1px solid #e2e2e2;
+}
+
+.wm-app .company-details-list .app-list .app-list-item .btn.app-button,
+.wm-app .company-details-list .app-livelist .app-list-item .btn.app-button {
+    margin-right: 0 !important;
+}
+
+.wm-app .app-livelist[name="list1"] .app-card .app-card-content .app-label.h2,
+.wm-app .app-livelist[name="list1"] .app-card .app-card-content .app-label[name="Name"] {
+    font-weight: normal;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0.2em;
+    font-size: 15px;
+    font-family: 'Lexend-Semibold', 'Arial', 'sans-serif';
+}
+
+.wm-app .app-livelist[name="list1"] .app-card .app-card-content .app-label.h2 {
+    font-family: 'Lexend-Regular', 'Arial', 'sans-serif';
+}
+
+.wm-app .app-livelist[name="list1"] .app-card {
+    min-height: 160px;
+}
+
+.wm-app .app-livelist[name="list1"] .app-card .app-card-content {
+    padding: 1.5em;
+}
+
+
+/*live list items styles*/
+
+.wm-app .app-list .app-list-item,
+.wm-app .app-livelist .app-list-item {
+    /*background-color: transparent;*/
+    border-color: transparent;
+}
+
+.wm-app .card-listing .app-card,
+.wm-app .card-listing .app-card-content {
+    border-radius: 10px;
+}
+
+.wm-app .card-listing .app-card-content .app-label[name="Name"] {
+    color: inherit;
+}
+
+.wm-app .card-listing .app-card-content .app-label {
+    padding-top: 0;
+    font-size: 13px;
+}
+
+.wm-app .card-listing .app-card-content .app-label.h4 {
+    font-size: 18px;
+}
+
+.wm-app .card-listing .app-card .app-card-content .app-label.p {
+    font-size: 24px;
+    padding: 15px 0;
+}
+
+
+/*dialog alignments*/
+
+.wm-app .modal-dialog .app-form .app-form {
+    padding: 0;
+}
+
+.wm-app .modal-body {
+    padding: 0;
+}
+
+.wm-app .modal-dialog[name="NewLedgerDialog"] .modal-body {
+    padding-bottom: 0;
+}
+
+
+/*.wm-app .modal-dialog[name="NewBeneficiaryDialog"] .modal-body {
+    padding: 0;
+}*/
+
+.wm-app .modal-dialog.content-center-align .modal-body,
+.wm-app .modal-dialog.content-center-align.form-no-padding .app-form {
+    padding: 0;
+}
+
+.wm-app .modal-dialog .app-form,
+.wm-app .modal-dialog .tranfer-success {
+    padding: 1em 2em;
+}
+
+.wm-app .modal-dialog.content-center-align .modal-header {
+    /*padding: 2em;*/
+}
+
+.wm-app .panel-group .panel-heading+.panel-collapse>.panel-body {
+    padding: 1em 2em;
+}
+
+.wm-app .app-wizard .app-wizard-body .app-wizard-step-content {
+    padding: 1em 2em;
+}
+
+.wm-app .app-liveform .form-group .app-switch,
+.wm-app .app-form .form-group .app-switch,
+.wm-app .app-livefilter .form-group .app-switch {
+    width: 90%;
+}
+
+
+/*
+.wm-app .app-form .panel-footer.form-action .btn,
+.wm-app .app-liveform .panel-footer.form-action .btn,
+.wm-app .app-livefilter .panel-footer.form-action .btn {
+    padding: 10px 15px;
+}*/
+
+.wm-app .modal-dialog.dialog-with-form .modal-body {
+    padding-bottom: 0;
+}
+
+.wm-app .modal-dialog.dialog-with-form .app-form .form-group .form-control-static+.app-input-wrapper>.form-control,
+.wm-app .modal-dialog.dialog-with-form .app-liveform .form-group .form-control-static+.app-input-wrapper>.form-control,
+.wm-app .modal-dialog.dialog-with-form .app-liveform .form-group .form-control-static+.wm-input>.form-control,
+.wm-app .app-livefilter .form-group .form-control-static+.wm-input>.form-control,
+.wm-app .modal-dialog.dialog-with-form .app-form .form-group .form-control-static+.input-group,
+.wm-app .app-liveform .form-group .form-control-static+.input-group,
+.wm-app .modal-dialog.dialog-with-form .app-liveform .form-group .form-control-static+.app-select-wrapper,
+.wm-app .modal-dialog.dialog-with-form .app-liveform .form-group .app-switch,
+.wm-app .modal-dialog.dialog-with-form .app-form .form-group .app-switch,
+.wm-app .modal-dialog.dialog-with-form .app-liveform .form-group .form-control-static+.app-select-wrapper {
+    width: 100%;
+}
+
+
+/*dialog view seperator*/
+
+.wm-app .modal-dialog.type-selection .type-view {
+    padding: 1em 2em;
+}
+
+
+/*wizard steps alignment*/
+
+@media only screen and (max-width: 767px) and (min-width: 299px) {
+    .wm-app .app-wizard.dottedstepper .app-wizard-steps .app-wizard-step.current .wizard-step-number,
+    .wm-app .app-wizard.number .app-wizard-steps .app-wizard-step .wizard-step-number {
+        top: -53px;
+    }
+    .wm-app .app-wizard.dottedstepper .app-wizard-steps .app-wizard-step.current .wizard-step-number,
+    .wm-app .app-wizard.number .app-wizard-steps .app-wizard-step.current .wizard-step-number {
+        top: -28px;
+    }
+    .wm-app .app-wizard .app-wizard-steps .app-wizard-step.current a .app-icon,
+    .wm-app .app-wizard .app-wizard-steps .app-wizard-step.disabled a .app-icon,
+    .wm-app .app-wizard .app-wizard-steps .app-wizard-step.active a .app-icon {
+        background-color: transparent;
+        font-size: 1.6em;
+        border-radius: 30px;
+    }
+    .wm-app .app-wizard .app-wizard-actions .app-button {
+        width: 80px;
+        padding: 10px;
+    }
+    .wm-app .app-wizard .app-wizard-body .app-wizard-step-content {
+        padding: 1em;
+    }
+    .wm-app .app-header+.app-content {
+        margin-top: 0pt;
+    }
+}
+
+
+/*Handling mobile styles*/
+
+@media only screen and (min-width: 299px) and (max-width: 480px) {
+    .wm-app .app-header .app-grid-layout .app-grid-row .app-grid-column {
+        padding: 1em 0.5em 0.5em 1em !important;
+    }
+}
+
+
+/*transaction from details*/
+
+.wm-app .details-list .transfer-details .app-container {
+    min-width: 80%;
+}
+
+.wm-app .panel {
+    margin-bottom: 0;
+}
+
+.wm-app .account-currency {
+    font-size: 23px !important;
+    padding: .3em .6em;
+    background-color: #ffeaee;
+    opacity: .8;
+    border-radius: 5px;
+    color: #ec477c;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    text-align: center;
+}
+
+.wm-app .amount-payable {
+    background-image: linear-gradient(252deg, #6a7fff, #9a5aff);
+    color: #fff;
+    padding: 2em;
+    border-radius: 6px;
+    margin-bottom: 3em;
+    margin-top: 2em;
+}
+
+.wm-app .filled-arrow {
+    background-image: linear-gradient(225deg, #6a7fff, #9a5aff);
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    padding: .3em;
+    font-size: 11px;
+}
+
+.wm-app .filled-plus {
+    background-image: linear-gradient(225deg, #ff9642, #ff6f51);
+    border-radius: 33px;
+    width: 33px;
+    height: 30px;
+    color: #fff;
+    padding: 0.6em;
+    font-size: 12px;
+}
+
+
+/* Dashboard*/
+
+.wm-app .db-column-1 {
+    padding: 2em 2em 1em;
+    border-right: 1px solid rgba(151, 151, 151, 0.2);
+}
+
+.wm-app .db-column-2 {
+    padding: 2em;
+}
+
+.wm-app .app-livelist.media-list .list-group-item {}
+
+
+/*Fixed page styles*/
+
+.wm-app {
+    overflow: hidden;
+}
+
+.wm-app .app-livelist.media-list.Scroll {
+    height: 85vh;
+    padding-bottom: 3em;
+}
+
+
+/*Scrollbars for the page list*/
+
+.wm-app .app-livelist.card-listing,
+.wm-app .app-livelist.ledgers-list {
+    height: 85vh;
+    padding-bottom: 3em;
+}
+
+.wm-app .modal-dialog.wizard-dialog .app-form,
+.wm-app .modal-dialog.wizard-dialog .tranfer-success {
+    padding: 0;
+}
+
+
+/*Handling btn-tertiary class styles for wizard previous button*/
+
+.wm-app .app-wizard .app-wizard-actions .app-button[name*="previousBtn"] {
+    border: 1px solid #ff7250;
+    color: #ff7250;
+    min-width: 80px;
+    background-color: transparent;
+}
+
+
+/*Dashboard container styles*/
+
+.wm-app .account-container {
+    background-color: #fff;
+    border: dashed 1px #a9aeb0;
+    border-radius: 14px;
+}
+
+
+/*Dialog styles*/
+
+.wm-app .app-dialog.wizard-dialog .app-dialog-footer[name="dialogFundAccount"] {
+    display: none;
+}
+
+.app-html-container {
+    padding: .5em 0;
+}
+
+.wm-app .app-dialog.wizard-dialog .fullbleed-notification-popup {
+    height: 91vh;
+    padding-top: 5em;
+}
+
+
+/*standard card creation container*/
+
+.wm-app .wizard-dialog .content-center-align .fullbleed-notification-popup>.app-container {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.wm-app .wizard-dialog .content-center-align .fullbleed-notification-popup>.app-container .app-card .app-card-content {
+    min-height: 250px;
+}
+
+
+/*fund account dialog with shadowed container*/
+
+.wm-app .app-dialog.wizard-dialog .fullbleed-notification-popup .app-container[name="container5"] {
+    margin: 0 auto;
+    width: 60%;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 30px 120px 0 rgba(181, 190, 199, 0.4);
+    border-radius: 10px;
+}
+
+.wm-app .app-dialog.wizard-dialog .fullbleed-notification-popup .app-container[name="container4"] {
+    margin: 0 auto;
+    width: 60%;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 30px 120px 0 rgba(181, 190, 199, 0.4);
+    border-radius: 10px;
+}
+
+
+/*CVV label*/
+
+.wm-app .card-listing .app-card-content .app-label[caption="CVV"] {
+    margin-top: 1em !important;
+    margin-left: 1em !important;
+    font-size: 13px !important;
+}
+
+
+/*CVV container styles*/
+
+.wm-app .app-container .cvv-container {
+    padding: 8px 4px 8px 6px;
+    border-style: groove;
+    /* border-color: #8ca0ff; */
+    border-radius: 8px;
+}
+
+.wm-app .modal-dialog.wizard-dialog .tranfer-success {
+    background-color: #fbfbfc;
+}
+
+.wm-app .app-container[name="containerPayments"] {
+    margin-right: 12em;
+    margin-left: 12em;
+}
+
+.wm-app .app-form[name="createLedgerForm"] .panel-body .form-action {
+    margin-top: 19em;
+    padding-right: 4em !important;
+}
+
+
+/*Capitalise all button captions*/
+
+.app-button .btn-caption {
+    text-transform: uppercase !important;
+}
+
+.wm-app .modal-dialog.wizard-dialog .app-form[name="CreateManagedCardForm1"] {
+    top: -1em;
+}

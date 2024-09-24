@@ -1,0 +1,33 @@
+{
+  "AddressDetails" : {
+    "_id" : "wm-AddressDetails-wm.Variable-1626950602167",
+    "name" : "AddressDetails",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "street" : "",
+      "buildingOrAddressLine2" : "",
+      "city" : "",
+      "state" : "",
+      "postalCode" : "",
+      "country" : ""
+    },
+    "type" : "entry",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}
